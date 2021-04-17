@@ -6,7 +6,7 @@
 export const PRODUCT_API = 
 `https://zax5j10412.execute-api.ap-southeast-1.amazonaws.com/dev/api/product/list?page=1`;
 export const DETAIL_API = 
-'https://reqres.in/api/users/';
+'https://zax5j10412.execute-api.ap-southeast-1.amazonaws.com/dev/api/product/';
 
 // export const color = {
 //     white: '#FFFFFF',

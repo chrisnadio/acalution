@@ -1,0 +1,94 @@
+* {
+  box-sizing: border-box;
+}
+
+
+/* Style the top navigation bar */
+.navbar {
+  display: flex;
+  background-color: white;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  color: rgb(183, 135, 40);
+  padding: 14px 20px;
+  text-decoration: none;
+  text-align: left;
+}
+
+/* Column container */
+.row {  
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  flex: 30%;
+  /* background-color: #494343; */
+  padding: 20px;
+  width: 70px;
+  height: 650px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+/* Main column */
+.main {
+  flex: 70%;
+  background-color: white;
+  padding: 20px;
+  text-align: left;
+}
+
+.middle-text {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px 0px;
+}
+
+h2 {
+  font-size: 2em;
+  font-weight: 300;
+  color: rgb(149, 98, 45);
+  font-family: Roboto;
+}
+
+h4 {
+  font-size: 20px;
+  font-family: Roboto;
+}
+
+h5 {
+  font-size: 20px;
+  text-decoration: underline;
+  font-family: sans-serif;
+}
+
+h6 {
+  font-size: 16px;
+  font-family: Roboto;
+  color: rgb(149, 98, 45);
+  font-weight: 300;
+  margin-bottom: 4px;
+}
+
+h7 {
+  font-size: 18px;
+  font-family: Roboto;
+  color: black;
+  font-weight: 400;
+  display: block;
+  text-align: left;
+}
+
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .row, .navbar {   
+    flex-direction: column;
+  }
+}

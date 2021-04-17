@@ -17,7 +17,7 @@ export const getProduct = () => {
 };
 
 export const getMovieDetail = id => dispatch => {
-    axios.get(`https://zax5j10412.execute-api.ap-southeast-1.amazonaws.com/dev/api/product/${id}`)
+    axios.get(`https://zax5j10412.execute-api.ap-southeast-1.amazonaws.com/dev/api/product/`)
         .then(res => {
             if (res.status === 200) {
                 dispatch({
