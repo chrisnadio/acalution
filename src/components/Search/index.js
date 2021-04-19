@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import axios from 'axios';
+import React, {  } from 'react';
 import "../../assets/Css/search.css";
 
 
 const SearchProduct = () => {
-  const [input, setInput] = useState("");
-
+ 
   return (
     <>
       <form className="example">

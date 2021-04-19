@@ -6,19 +6,22 @@
 /* Style the top navigation bar */
 .navbar {
   display: flex;
+  flex-direction: row;
   background-color: white;
+  max-width: 600px;
 }
 
 /* Style the navigation bar links */
 .navbar p {
   color: rgb(183, 135, 40);
-  padding: 14px 20px;
+  padding: 0px;
 }
 
 /* Column container */
 .row {  
   display: flex;
   flex-wrap: wrap;
+  margin: 25px;
 }
 
 /* Create two unequal columns that sits next to each other */

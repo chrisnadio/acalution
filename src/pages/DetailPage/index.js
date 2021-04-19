@@ -1,35 +1,39 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
 import { useParams } from 'react-router-dom';
-import { DETAIL_API } from '../../utility/constant';
 import Button from '../../components/Button';
 import '../../assets/Css/detailpage.css';
-// import { getMovieDetail } from '../../redux/Action/action';
-// import { connect } from 'react-redux';
+import { getDetail } from '../../redux/Action/action';
+import { useDispatch, useSelector } from 'react-redux';
+// import axios from 'axios';
+// import { DETAIL_API } from '../../utility/constant';
 
 const DetailPage = () => {
     const {id} = useParams();
-    const [detail, setDetail] = useState([]);
-    useEffect(() => {
-        const getData = async () => {
-            const result = await axios(`${DETAIL_API}${id}`);
-            setDetail(result.data.value);
-            console.log('data getData',result);
-        };
-        getData();
-    },[id]);
+    // const [detail, setDetail] = useState([]);
 
     // useEffect(() => {
-    //     props.getProduct();
-    // },[]);
+    //     const getData = async () => {
+    //         const result = await axios(`${DETAIL_API}${id}`);
+    //         setDetail(result.data.value);
+    //         console.log('data getData',result);
+    //     };
+    //     getData();
+    // },[id]);
+
+    const detail = useSelector((state) => state.data.productDetail)
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+        dispatch(getDetail(id))
+    },[id]);
 
     return (
     <>
         <div className='navbar'>
-            <p> Home  >  
-            Product  >  
-            {detail.type}  >   
-            {detail.grapeVarieties}</p>
+            <div><p>Home</p></div>
+            <div><p>Product</p></div>
+            <div><p>{detail.type}</p></div>
+            <div><p>{detail.grapeVarieties}</p></div>
         </div>
         <div className="row">
             <div className="side">
@@ -72,17 +76,3 @@ const DetailPage = () => {
 }
 
 export default DetailPage;
-
-// const mapStateToProps = (state) => {
-//     return {
-//         products: state.data.productDetail,
-//     };
-// };
-
-// const mapDispatchToProps = (dispatch) => {
-//     return {
-//         getProducts: () => dispatch(getMovieDetail()),
-//     };
-// };
-
-// export default connect(mapStateToProps,mapDispatchToProps)(DetailPage);
