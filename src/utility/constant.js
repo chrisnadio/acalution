@@ -8,6 +8,12 @@ export const PRODUCT_API =
 export const DETAIL_API = 
 'https://zax5j10412.execute-api.ap-southeast-1.amazonaws.com/dev/api/product/';
 
+// export const getProduct = async page => {
+//     const result = await axios(`${PRODUCT_API}`);
+//             setProduct(result.data.value.products);
+//         getProduct();
+// };
+
 // export const color = {
 //     white: '#FFFFFF',
 //     black: '#000000',

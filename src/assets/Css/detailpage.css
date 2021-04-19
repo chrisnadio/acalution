@@ -10,11 +10,9 @@
 }
 
 /* Style the navigation bar links */
-.navbar a {
+.navbar p {
   color: rgb(183, 135, 40);
   padding: 14px 20px;
-  text-decoration: none;
-  text-align: left;
 }
 
 /* Column container */
@@ -42,6 +40,12 @@
   background-color: white;
   padding: 20px;
   text-align: left;
+}
+
+.upper-text {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 125px;
 }
 
 .middle-text {
@@ -84,7 +88,6 @@ h7 {
   display: block;
   text-align: left;
 }
-
 
 /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 700px) {

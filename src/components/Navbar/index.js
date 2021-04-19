@@ -3,7 +3,6 @@ import '../../assets/Css/navbar.css';
 import SearchProduct from '../Search';
 import Logo from '../../assets/Images/logo.PNG';
 import Cart from '../../assets/Images/cart.PNG';
-// import { Collapse, NavbarToggler, Nav, NavItem, NavLink } from 'reactstrap';
 
 const MainNavbar = () => {
 

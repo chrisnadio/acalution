@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import { DETAIL_API } from '../../utility/constant';
+import Button from '../../components/Button';
 import '../../assets/Css/detailpage.css';
 // import { getMovieDetail } from '../../redux/Action/action';
 // import { connect } from 'react-redux';
@@ -25,20 +26,22 @@ const DetailPage = () => {
     return (
     <>
         <div className='navbar'>
-            <a href='#'>Home</a>
-            <a href='#'>Product</a>
-            <a href='#'>{detail.type}</a>
-            <a href='#'>{detail.grapeVarieties}</a>
+            <p> Home  >  
+            Product  >  
+            {detail.type}  >   
+            {detail.grapeVarieties}</p>
         </div>
         <div className="row">
             <div className="side">
                 <img src={detail.image} alt='avatar'/>
             </div>
-        <div className="main">
+        <div className='main'>
             <h2>{detail.name}</h2>
-            <h5>{detail.grapeVarieties} {detail.vintageYear}</h5>      
-            <h4>S${detail.price}</h4>
-            <button>ADD TO CART</button>
+            <h5>{detail.grapeVarieties} {detail.vintageYear}</h5>
+            <div className='upper-text'>    
+                <div><h4>S$ {detail.price}</h4></div>
+                <div><Button>ADD TO CART</Button></div>
+            </div>  
             <div className='middle-text'>
                 <div>
                     <h6>Region</h6>

@@ -1,0 +1,37 @@
+*{
+    box-sizing: border-box;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+}
+
+.cart-button button {
+    flex: 85%;
+    background-color: rgb(204,150,44);
+    color: white;
+    border-radius: 4px;
+    border: none;
+    font-family: sans-serif;
+    position: relative;
+    font-size: 13px;
+    font-weight: 300;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    height: 36px;
+    width: 140px;
+    margin-right: 5px;
+}
+
+.book-button button {
+    flex: 15%;
+    background-color: rgb(204,150,44);
+    border: none;
+    height: 36px;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
